@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="New folder (2)\Firstfear-Whistlepuff-Image-heart.256.ico" type="image/x-icon">
+    <title>Songs That Remind Me of You</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        /* Carousel Container */
+        .carousel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 350px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Song Cards */
+        .cards {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .card {
+            min-width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            border-bottom: 2px solid #ffc5d9;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        /* Spinning CD Image */
+        .cd-image {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            animation: spin 5s linear infinite;
+            cursor: pointer; /* Indicate it's clickable */
+            position: relative; /* Position relative for tooltip */
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Arrow Button Styling */
+.arrow {
+    background: #ff6e7f;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 5px 12px; /* Smaller padding */
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10; /* Keep arrows on top */
+}
+
+/* Position Arrows */
+.arrow.left {
+    margin-right: 10px; /* Push left arrow slightly inward */
+}
+
+.arrow.right {
+    margin-left: 10px; /* Push right arrow slightly inward */
+}
+
+        h1 {
+            font-size: 20px; /* Smaller and responsive */
+            color: #d47a85;
+            margin: 10px 0;
+            text-align: center;
+            font-weight: bold;
+        }    
+                /* Adjust line height and margins for song card text */
+        .card h3 {
+            font-size: 18px; /* Adjust font size */
+            line-height: 1.2; /* Tighter line spacing */
+            margin: 5px 0; /* Reduce top and bottom margins */
+            color: #a85c6b;
+        }
+
+        .card p {
+            font-size: 14px; /* Adjust font size */
+            line-height: 1.4; /* Reduce spacing between lines */
+            margin: 3px 0; /* Minimal spacing */
+            color: #a85c6b;
+        }
+
+        /* Optional: Adjust the line-separator spacing */
+        .line-separator {
+            margin: 10px 0; /* Adjust the spacing above/below the line */
+            height: 1px;
+            background-color: #ffc5d9; /* Line color */
+        }
+
+        /* Ensure lyrics container stays on top */
+        .card div:last-child {
+            position: relative; /* Ensure it stacks properly */
+            z-index: 10; /* Ensure it's on top of other elements */
+            max-height: 120px; /* Set a fixed height for scrollability */
+            overflow-y: auto; /* Enable vertical scrolling */
+            margin-top: 10px; /* Add spacing */
+            padding: 10px; /* Improve padding for readability */
+            background-color: #fffafa; /* Light background for contrast */
+            border: 1px solid #ffc5d9; /* Optional: subtle border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 14px; /* Adjust font size */
+            line-height: 1.5; /* Improve line spacing */
+            text-align: justify; /* Neatly align text */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for clarity */
+        }
+
+        .title-container {
+            display: flex;
+            align-items: center; /* Align arrows and title vertically */
+            justify-content: space-between; /* Space arrows evenly */
+            position: relative;
+            width: 100%; /* Take full width */
+            margin-bottom: 10px; /* Space below the title */
+        }
+
+        /* Title Styling */
+        .title-container h1 {
+            flex: 1; /* Allow the title to grow and center itself */
+            text-align: center;
+            font-size: 20px;
+            color: #d47a85;
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Indicator Styling */
+        .indicator-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Align vertically */
+    gap: 20px; /* Space between the elements */
+    margin-top: 10px; /* Adjust spacing from above content */
+}
+
+/* Indicator Styling */
+.indicator {
+    font-size: 16px;
+    color: #d47a85;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Back Button Styling */
+.back-button_2 {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #b54954; /* Back button color */
+    color: white;
+    text-decoration: none; /* Remove underline */
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.back-button:hover {
+    background-color: #8e3a41; /* Darker shade on hover */
+}
+
+
+    </style>
+
+</head>
+<body>
+    <div class="popup">
+        <div class="popup-gr">
+
+            <div class="popup-header">
+                <div class="hearts">
+                    <img src="New folder (2)\hearts.gif" alt="Cute Bunny" class="flashing-hearts">
+                </div>
+                <div class="popup-actions">
+                    <span class="icon love"></span>
+                    <span class="icon menu"></span>
+                    <span class="icon close"></span>
+                </div>
+            </div>
+            <div class="line-separator"></div>
+
+
+            <div class="title-container">
+                <button class="arrow left" onclick="moveSlide(-1)">❮</button>
+                <h1 style="color: #d47a85;">♡ Songs That Remind Me of You ♡</h1>
+                <button class="arrow right" onclick="moveSlide(1)">❯</button>
+            </div>
+                <div class="line-separator"></div>
+
+                
+                <div class="carousel">
+                    <div class="cards">
+                        <!-- Card 1 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio1')">
+                                <h3>Until I Found You</h3>
+                                <p>Stephen Sanchez</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>I would never fall in love again until I found her<br>
+                                    I said, "I would never fall unless it's you I fall into"<br>
+                                    I was lost within the darkness, but then I found her<br>
+                                    I found you</p>
+                            </div>
+                            <audio id="audio1" src="songs/until_i_found_you.mp3"></audio>
+                        </div>
+                    
+                        <!-- Card 2 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio2')">
+                                <h3>Rest Assured</h3>
+                                <p>Jeff Bernat, Albert Posis,<br> Jesse Barrera, PRVDNT</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>Just know that I wont ever leave you, rest assured<br>
+                                    Cus I, I know that forever's not enough<br>
+                                    But I'll be your side when time's get rough<br>
+                                    My heart is all yours to keep<br>
+                                    I'm yours for the taking<br>
+                                    Cuz you're all I've been waiting for<br>
+                                    Rest assured</p>
+                            </div>
+                            <audio id="audio2" src="songs/rest_assured.mp3"></audio>
+                        </div>
+                    
+                        <!-- Card 3 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio3')">
+                                <h3>Those Eyes</h3>
+                                <p>New West</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>'Cause all of the small things that you do<br>
+                                    Are what remind me why I fell for you<br>
+                                    And when we're apart and I'm missing you<br>
+                                    I close my eyes and all I see is you<br>
+                                    And the small things you do</p>
+                            </div>
+                            <audio id="audio3" src="songs/those_eyes.mp3"></audio>
+                        </div>
+                    
+                        <!-- Card 4 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio4')">
+                                <h3>Babalik Sa'yo</h3>
+                                <p>Moira Dela Torre</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>Handa kong gawin ang lahat<br>
+                                    Makapiling ka lang<br>
+                                    Walang hihigit sa iyo, ikutin pa ang mundo<br>
+                                    Ako'y babalik, babalik sa'yo<br>
+                                    Tanging ikaw ang sigaw ng puso araw-araw<br>
+                                    Aminin ko na sa'yo, ngayon lang nagka-gan'to<br>
+                                    Ako'y babalik, babalik, babalik pa rin sa'yo</p>
+                            </div>
+                            <audio id="audio4" src="songs/babalik_sayo.mp3"></audio>
+                        </div>
+                    
+                        <!-- Card 5 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio5')">
+                                <h3>Maybe We Could Be A Thing</h3>
+                                <p>Jesse Barrera, Michael Carreon,<br> Albert Posis</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>I wanna believe that it's real<br>
+                                    (Tell me this is real)<br>
+                                    That someone like you makes me feel how I feel<br>
+                                    I can't tell you baby what it was<br>
+                                    I think I like you just because<br>
+                                    (Just because)<br>
+                                    The way things been going lately<br>
+                                    It probably won't<br>
+                                    But it could be amazing<br>
+                                    Maybe we could be a thing</p>
+                            </div>
+                            <audio id="audio5" src="songs/maybe_we_could_be_a_thing.mp3"></audio>
+                        </div>
+                    
+                        <!-- Add Remaining Songs Dynamically -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio6')">
+                                <h3>Fallen</h3>
+                                <p>Lola Amour</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>What if I told you that I've fallen<br>
+                                    And I like the way you say my name<br>
+                                    My heart skips a beat when I hear you calling<br>
+                                    And I like that it won't go away</p>
+                            </div>
+                            <audio id="audio6" src="songs/fallen.mp3"></audio>
+                        </div>
+                    
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio7')">
+                                <h3>Hoodie</h3>
+                                <p>Dionela ft. Alisson Shore</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>Baby, you're my serenity,<br>
+                                    my favorite melody<br>
+                                    The remedy I need, girl,<br>
+                                    I wanna be your one and only (only)<br>
+                                    Malabong mapundi luwalhati mong bitbit<br>
+                                    Na sa iyong mata'y lingid,<br>
+                                    ikaw ang kahulugan ng "Simple"</p>
+                            </div>
+                            <audio id="audio7" src="songs/hoodie.mp3"></audio>
+                        </div>
+                    
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio8')">
+                                <h3>I Like You The Most</h3>
+                                <p>Ponchet ft. Varinz (Shad English Cover)</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>'Cause you're the one that I like, I can't deny<br>
+                                    Every night you're on my mind<br>
+                                    So, if I call you tonight<br>
+                                    Will you pick up and give me your time?<br>
+                                    Miss you every night, miss you all the time<br>
+                                    No, I don't even know where to start<br>
+                                    'Cause you're the one that I like, I can't deny<br>
+                                    Everything I feel inside<br>
+                                    Will you tell me I'm the one<br>
+                                    The one inside of your heart?<br>
+                                    Used to brush aside, now I can't deny<br>
+                                    That, baby, you're my special one<br>
+                                    'Cause you're the one that I like</p>
+                            </div>
+                            <audio id="audio8" src="songs/i_like_you_the_most.mp3"></audio>
+                        </div>
+                    
+                        <!-- Repeat the structure for all remaining songs -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio9')">
+                                <h3>Tiptoe</h3>
+                                <p>Hybs</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>If you're in the mood<br>
+                                    We can take it to the moon<br>
+                                    Just like a movie scene<br>
+                                    Table for two<br>
+                                    No need to be fed<br>
+                                    I want you instead<br>
+                                    If you're in the mood<br>
+                                    We can tip toe to the moon</p>
+                            </div>
+                            <audio id="audio9" src="songs/tiptoe.mp3"></audio>
+                        </div>
+                    
+
+                        <!-- Card 10 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio10')">
+                                <h3>Butterflies</h3>
+                                <p>Denise Julia</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>Is it simply the buzz from the liquor?<br>
+                                    Butterflies on your neck make me quiver<br>
+                                    Is it true 'cause I hear all the rumors<br>
+                                    
+                                    But I gotta ask<br>
+                                    How you make me act like this, oh, no?<br>
+                                    How you make me act like this, oh, no?<br>
+                                    How you make me trip like this, oh, no?<br>
+                                    Though this ain't new to me<br>
+                                    I ain't used to this</p>
+                            </div>
+                            <audio id="audio10" src="songs/butterflies.mp3"></audio>
+                        </div>
+
+                        <!-- Card 11 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio11')">
+                                <h3>Anybody</h3>
+                                <p>Shae</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>Is anybody out there watching me fall in love, love, love?<br>
+                                    And see, what I see, see, see? He's too good for me, me, me<br>
+                                    Hey, anybody out there? Tell me, this boy is mine, mine, mine<br>
+                                    So I can believe, 'lieve, 'lieve, too good, it can't be, be, be<br>
+                                    Is anybody out there, somewhere listenin' to me?</p>
+                            </div>
+                            <audio id="audio11" src="songs/anybody.mp3"></audio>
+                        </div>
+
+                        <!-- Card 12 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio12')">
+                                <h3>The Most Beautiful Thing</h3>
+                                <p>Bruno Major</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>I don't know who you are<br>
+                                    But I'll save you a seat<br>
+                                    Hang my coat on a chair next to me<br>
+                                    I tried to reassure the waiter<br>
+                                    Say you're down the street<br>
+                                    He laughed at me<br>
+                                    So here's to you<br>
+                                    The most beautiful thing that I have never seen</p>
+                            </div>
+                            <audio id="audio12" src="songs/the_most_beautiful_thing.mp3"></audio>
+                        </div>
+
+                        <!-- Card 13 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio13')">
+                                <h3>This I Promise You</h3>
+                                <p>Nsync</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>I will take you in my arms<br>
+                                    And hold you right where you belong<br>
+                                    'Til the day my life is through<br>
+                                    This I promise you, babe<br>
+                                    Just close your eyes each loving day<br>
+                                    And know this feeling won't go away<br>
+                                    Every word I say is true<br>
+                                    This I promise you<br>
+                                    Every word I say is true<br>
+                                    This I promise you<br>
+                                    Ooh, I promise you</p>
+                            </div>
+                            <audio id="audio13" src="songs/this_i_promise_you.mp3"></audio>
+                        </div>
+
+                        <!-- Card 14 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio14')">
+                                <h3>Agora Hills</h3>
+                                <p>Doja Cat</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>Kissing, I hope they caught us<br>
+                                    Whether they like or not<br>
+                                    I wanna show you off (off), I wanna show you off<br>
+                                    I wanna brag about it<br>
+                                    I wanna tie the knot<br>
+                                    I wanna show you off, I wanna show you off<br>
+                                    I wanna show you</p>
+                            </div>
+                            <audio id="audio14" src="songs/agora_hills.mp3"></audio>
+                        </div>
+
+                        <!-- Card 15 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio15')">
+                                <h3>Bloom</h3>
+                                <p>Aidan Bisset</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>You make everything bloom, bloom<br>
+                                    Burn my black-and-white world down to the ground<br>
+                                    You make everything bloom<br>
+                                    When memories start bleeding<br>
+                                    And words lose their meaning<br>
+                                    You give me a reason<br>
+                                    The sweetest reminder, the fuse to my fire<br>
+                                    You're all I desire</p>
+                            </div>
+                            <audio id="audio15" src="songs/bloom.mp3"></audio>
+                        </div>
+
+                        <!-- Card 16 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio16')">
+                                <h3>Paninindigan Kita</h3>
+                                <p>Ben & Ben</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>Paninindigan kita oo<br>
+                                    Anumang sabihin ng magulong mundo<br>
+                                    Kahit ayaw nilang ako'y sayo<br>
+                                    Ika'y iingatan ko</p>
+                            </div>
+                            <audio id="audio16" src="songs/paninindigan_kita.mp3"></audio>
+                        </div>
+
+                        <!-- Card 17 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio17')">
+                                <h3>Make It With You</h3>
+                                <p>Ben & Ben</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>Life can be short or long<br>
+                                    Love can be right or wrong<br>
+                                    And if I chose the one I'd like to help me through<br>
+                                    I'd like to make it with you<br>
+                                    I really think that we could make it, girl</p>
+                            </div>
+                            <audio id="audio17" src="songs/make_it_with_you.mp3"></audio>
+                        </div>
+
+                        <!-- Card 18 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio18')">
+                                <h3>My Heart It Beats for You</h3>
+                                <p>Grent Perez</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>No matter what the future holds<br>
+                                    Para sa 'yo lang tumitibok ang puso ko<br>
+                                    No matter what the future holds<br>
+                                    It's you my heart beats for<br>
+                                   </p>
+                            </div>
+                            <audio id="audio18" src="songs/my_heart_it_beats.mp3"></audio>
+                        </div>
+
+                        <!-- Card 19 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio19')">
+                                <h3>Once in a Lifetime</h3>
+                                <p>Freestyle</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>I've heard it all before<br>
+                                    Finding so called love then you leave it behind<br>
+                                    But now I feel so sure<br>
+                                    I listen to my heart this time<br>
+                                    So I lay it on the line<br>
+                                    I know that what I've found is once in a lifetime<br>
+                                    And I know there's no way out<br>
+                                    'Cause it's once in a lifetime</p>
+                            </div>
+                            <audio id="audio19" src="songs/once_in_a_lifetime.mp3"></audio>
+                        </div>
+
+                        <!-- Card 20 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio20')">
+                                <h3>I'd Rather</h3>
+                                <p>Luther Vandross</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>I'd rather have bad times with you,<br> 
+                                    than good times with someone else<br>
+                                    I'd rather be beside you in a storm,<br> 
+                                    than safe and warm by myself<br>
+                                    I'd rather have hard times together,<br>
+                                    than to have it easy apart<br>
+                                    I'd rather have the one who holds my heart</p>
+                            </div>
+                            <audio id="audio20" src="songs/id_rather.mp3"></audio>
+                        </div>
+                                                
+
+                        <!-- Card 21 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio21')">
+                                <h3>Closer You and I</h3>
+                                <p>Gino Padilla</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>The closer I get to touching you<br>
+                                    The closer I get to loving you<br>
+                                    Give it a time, just a little more time<br>
+                                    We'll be together<br>
+                                    Every little smile, that special smile<br>
+                                    The twinkle in your eye in a little while<br>
+                                    Give it a time, just a little more time<br>
+                                    So we can get closer<br>
+                                    You and I
+                                    </p>
+                            </div>
+                            <audio id="audio21" src="songs/closer_you_and_i.mp3"></audio>
+                        </div>
+
+                        <!-- Card 22 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio22')">
+                                <h3>New Side of Me</h3>
+                                <p>Blake Roman</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>Kiss me, hold me, that feeling is holy<br>
+                                    Nobody's loved me like you<br>
+                                    Our life moves too fast to get stuck in the past<br>
+                                    But I do, I do</p>
+                            </div>
+                            <audio id="audio22" src="songs/new_side_of_me.mp3"></audio>
+                        </div>
+
+                        <!-- Card 23 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio23')">
+                                <h3>Sunkissed</h3>
+                                <p>Khai Dreams</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>'Cause you're so lovely<br>
+                                    You're so lovely<br>
+                                    I can't help but fall for you, love<br>
+                                    When you love me<br>
+                                    It's so lovely loving you, oh, oh<br>
+                                    So lovely loving you, oh, oh</p>
+                            </div>
+                            <audio id="audio23" src="songs/sunkissed.mp3"></audio>
+                        </div>
+
+                        <!-- Card 24 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio24')">
+                                <h3>Thim Slick</h3>
+                                <p>Fabolous</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>That body perfect in my eyes<br>
+                                    No matter what they say, everything looking just fine<br>
+                                    You got that blessing in disguise<br>
+                                    You wouldn't know, girl you got it</p>
+                            </div>
+                            <audio id="audio24" src="songs/thim_slick.mp3"></audio>
+                        </div>
+
+                        <!-- Card 25 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio25')">
+                                <h3>Sunsets With You</h3>
+                                <p>Cliff, Yden</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>Oh baby take my hand<br>
+                                    We'll walk toward the sand<br>
+                                    I wanna go with you<br>
+                                    And only you, my boo<br>
+                                    I wanna be your man<br>
+                                    The future we will plan<br>
+                                    The things we wanna do<br>
+                                    Like watch the sunset with you</p>
+                            </div>
+                            <audio id="audio25" src="songs/sunsets_with_you.mp3"></audio>
+                        </div>
+
+                        <!-- Card 26 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio26')">
+                                <h3>Ligaya</h3>
+                                <p>mrld</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>Isasayaw kita na para bang<br>
+                                    Ito na ang panghuli natin, sinta<br>
+                                    'Wag kang mag-alala, 'di kita hahayaang mag-isa<br>
+                                    Sasamahan nga kita sa dulo ng ligaya</p>
+                            </div>
+                            <audio id="audio26" src="songs/ligaya.mp3"></audio>
+                        </div>
+
+                        <!-- Card 27 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio27')">
+                                <h3>Amazed</h3>
+                                <p>Lonestar</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>I don't know how you do what you do<br>
+                                    I'm so in love with you<br>
+                                    It just keeps gettin' better<br>
+                                    I wanna spend the rest of my life<br>
+                                    With you by my side<br>
+                                    Forever and ever<br>
+                                    Every little thing that you do<br>
+                                    Baby I'm amazed by you</p>
+                            </div>
+                            <audio id="audio27" src="songs/amazed.mp3"></audio>
+                        </div>
+
+                        <!-- Card 28 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio28')">
+                                <h3>When You Say Nothing at All</h3>
+                                <p>Ronan Keating</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>The smile on your face lets me know that you need me<br>
+                                    There's a truth in your eyes saying you'll never leave me<br>
+                                    The touch of your hand says you'll catch me wherever I fall<br>
+                                    You say it best when you say nothing at all</p>
+                            </div>
+                            <audio id="audio28" src="songs/when_you_say_nothing.mp3"></audio>
+                        </div>
+
+                        <!-- Card 29 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio29')">
+                                <h3>Sophia</h3>
+                                <p>Clairo</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>You know I'll do anything you ask me to<br>
+                                    But oh my God, I think I'm in love with you<br>
+                                    Standin' here alone now, think that we can drive around<br>
+                                    I just wanna say how I love you with your hair down<br>
+                                    Baby, you don't gotta fight, I'll be here 'til the end of time<br>
+                                    Wishin' that you were mine, pull you in, it's alright</p>
+                            </div>
+                            <audio id="audio29" src="songs/sophia.mp3"></audio>
+                        </div>
+
+                        <!-- Card 30 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio30')">
+                                <h3>Birds of a Feather</h3>
+                                <p>Billie Eilish</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>I want you to stay<br>
+                                    'Til I'm in the grave<br>
+                                    'Til I rot away, dead and buried<br>
+                                    'Til I'm in the casket you carry<br>
+                                    If you go, I'm going too<br>
+                                    'Cause it was always you, alright<br>
+                                    And if I'm turning blue, please don't save me<br>
+                                    Nothing left to lose without my baby</p>
+                            </div>
+                            <audio id="audio30" src="songs/birds_of_a_feather.mp3"></audio>
+                        </div>
+
+                        <!-- Card 31 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio31')">
+                                <h3>Sweatshirt</h3>
+                                <p>Patrick Hizon & EJEAN</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>You always make it easy<br>
+                                    Every time that we're together<br>
+                                    But I never realized how the list<br>
+                                    Goes on and on forever<br>
+                                    The way you lean in for a kiss<br>
+                                    And how we sang along to Taylor swift<br>
+                                    You're kindly conscious of all my nonsense<br>
+                                    Oh it's the little things I miss</p>
+                            </div>
+                            <audio id="audio31" src="songs/sweatshirt.mp3"></audio>
+                        </div>
+
+                        <!-- Card 32 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio32')">
+                                <h3>Love of My Life</h3>
+                                <p>South Border</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>To you<br>
+                                    Forever starts from now<br>
+                                    I promise you<br>
+                                    Loving you is all that I can do<br>
+                                    No one can take it away from me<br>
+                                    Nobody but you</p>
+                            </div>
+                            <audio id="audio32" src="songs/love_of_my_life.mp3"></audio>
+                        </div>
+
+                        <!-- Card 33 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio33')">
+                                <h3>Juna</h3>
+                                <p>Clairo</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>You make me wanna go dancing<br>
+                                    You make me wanna try on feminine<br>
+                                    You make me wanna go buy a new dress<br>
+                                    You make me wanna slip off a new dress<br>
+                            
+                                    Don't even try<br>
+                                    I don't have to think<br>
+                                    With you, there's no pretending<br>
+                                    
+                                    You know me, you know me<br>
+                                    And I just might know you too, ooh you<br>
+                                    Come to me slowly</p>
+                            </div>
+                            <audio id="audio33" src="songs/juna.mp3"></audio>
+                        </div>
+
+                        <!-- Card 34 -->
+                        <div class="card">
+                            <div>
+                                <img src="images/cd.png" alt="CD" class="cd-image" onclick="playAudio('audio34')">
+                                <h3>I swear</h3>
+                                <p>All-4-One</p>
+                            </div>
+                            <div class="line-separator"></div>
+                            <div>
+                                <p>I swear<br>
+                                    By the moon and stars in the sky<br>
+                                    I'll be there<br>
+                                    I swear<br>
+                                    Like the shadow that's by your side<br>
+                                    I'll be there<br>
+                                    For better or worse<br>
+                                    'Til death do us part<br>
+                                    I'll love you with every beat of my heart<br>
+                                    I swear</p>
+                            </div>
+                            <audio id="audio34" src="songs/swear.mp3"></audio>
+                        </div>
+
+                        <!-- Add more song cards using the same structure -->
+                    </div>
+                    
+                </div>
+
+        
+                <div class="indicator-container">
+                    <div class="indicator" id="carousel-indicator">1 / 34</div>
+                    <a href="page2.html" class="back-button_2">Back</a>
+                </div>
+                
+
+
+
+             
+
+                <script>
+                    let currentSlide = 0;
+
+                    function moveSlide(direction) {
+                        const cards = document.querySelector('.cards');
+                        const totalSlides = document.querySelectorAll('.card').length;
+
+                        // Update current slide index
+                        currentSlide += direction;
+
+                        if (currentSlide < 0) currentSlide = totalSlides - 1;
+                        if (currentSlide >= totalSlides) currentSlide = 0;
+
+                        // Update carousel position
+                        cards.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+                        // Update the indicator text
+                        const indicator = document.getElementById('carousel-indicator');
+                        indicator.textContent = `${currentSlide + 1} / ${totalSlides}`;
+                    }
+
+                    function playAudio(audioId) {
+                        const selectedAudio = document.getElementById(audioId);
+
+                        // Check if the audio is already playing
+                        if (selectedAudio.paused) {
+                            // Pause all other audios first
+                            const allAudios = document.querySelectorAll('audio');
+                            allAudios.forEach(audio => {
+                                if (audio !== selectedAudio) {
+                                    audio.pause();
+                                    audio.currentTime = 0;
+                                }
+                            });
+
+                            // Play the selected audio
+                            selectedAudio.play();
+                        } else {
+                            // Pause the audio if it's already playing
+                            selectedAudio.pause();
+                        }
+                    }
+
+                </script>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="New folder (2)\Firstfear-Whistlepuff-Image-heart.256.ico" type="image/x-icon">
+  <title>The Things I Love About You</title>
+  <link rel="stylesheet" href="styles1.css">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+    header {
+      position: absolute;
+      background-color: #f2bed1aa;
+      font-size: 24px;
+      font-weight: bold;
+      color: #a8404e;
+      padding: 10px 20px;
+      border-radius: 5px;
+      box-shadow: 2px 2px 8px #a8404e;
+    }
+    header:hover{
+        transform: scale(1.1); 
+        background-color: #f196a2; 
+        color: #fff8f9; 
+
+    }
+    .note {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: grab;
+      transform: rotate(calc(var(--tilt, 0deg)));
+      background-color: #fff;
+      overflow: hidden;
+      color:#673535;
+
+    }
+
+    .note:active {
+      cursor: grabbing;
+    }
+
+    .note:nth-child(odd) {
+      --tilt: -3deg;
+    }
+
+    .note:nth-child(even) {
+      --tilt: 3deg;
+    }
+
+    .note[contenteditable="true"] {
+      border: 2px solid #e0808d;
+      outline: none;
+      color: #333;
+    }
+
+    .note[contenteditable="true"]:empty:before {
+      content: "Click to edit";
+      color: #ccc;
+      font-style: italic;
+    }
+
+  
+  .image-container {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #e8acb4;
+      border-radius: 5px;
+      cursor: grab;
+    }
+
+    .image-container:active {
+      cursor: grabbing;
+    }
+
+
+    .image-container img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 5px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+    }
+
+    .resizer {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #a8404e;
+      border-radius: 50%;
+      cursor: se-resize;
+    }
+
+
+    .sticker-container {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: grab;
+    }
+
+    .sticker-container:active {
+      cursor: grabbing;
+    }
+
+    .resizer.br { bottom: -5px; right: -5px; }
+
+    /* Scrollable area (visible) */
+    .scrollable-area {
+        width: 100%; 
+        height: 700px; /* Visible height */
+        overflow-y: auto; /* Scrollable */
+        position: relative;
+        border: 2px solid #ffc5d9;
+    }
+
+    /* Internal area where notes will be generated */
+    .scrollable-content {
+        height: 2000px; /* Extend the generation area (adjust as needed) */
+        width: 100%;
+        position: relative; /* Notes are positioned within this area */
+    }
+
+    .sticker-container img {
+    height: 70px;       /* Set a fixed height */
+    width: auto;        /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensures the image fits nicely within the container */
+}
+
+  </style>
+</head>
+
+
+
+
+<body>
+    <header style="z-index: 888;">
+The Things I love about you
+    </header>
+
+    <a href="page2.html" class="back-button">Back</a>
+    <div class="scrollable-area" style="position: relative;">
+      <div class="scrollable-content">
+
+
+        <div class="note" style="background-color: #FFC1C1;">I love you</div>
+        <div class="note" style="background-color: #E6D4FF;">Hearing your voice</div>
+        <div class="note" style="background-color: #FFFACD;">The random dances that you do when you're excited</div>
+        <div class="note" style="background-color: #DFFFD6;">When you smile</div>
+        <div class="note" style="background-color: #effcb3;">Your pretty brown eyes</div>
+        <div class="note" style="background-color: #dcb9d6;">How excited you get when it comes to food or dogs or kids</div>
+        <div class="note" style="background-color: #ccb3fc;">How cute you are even when you're mad</div>
+        <div class="note" style="background-color: #a9def0;">How kind you are, you don't hesitate to help others</div>
+        <div class="note" style="background-color: #efa6b7;">Your smell</div>
+        <div class="note" style="background-color: #ebc9d1;">Your hugs</div>
+        <div class="note" style="background-color: #dcb9d6;">How cute you look when you sleep</div>
+        <div class="note" style="background-color: #effcb3;">How you're so sweet and considerate always</div>
+        <div class="note" style="background-color: #FFFACD;">When you smile so wide your eyes become small</div>
+        <div class="note" style="background-color: #ccb3fc;">when you hold me</div>
+        <div class="note" style="background-color: #a9def0;">Your cuteness</div>
+        <div class="note" style="background-color: #FFC1C1;">Your pretty face</div>
+        <div class="note" style="background-color: #dcb9d6;">Your head scratches</div>
+        <div class="note" style="background-color: #DFFFD6;">The way you laugh</div>
+        <div class="note" style="background-color: #FFC1C1;">Hearing you sing</div>
+
+
+
+
+
+
+
+
+
+        <div class="note" style="background-color: #9fe9a6; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <p style="margin-bottom: 10px;">Your love bites :D</p>
+          <img src="images/bite.jpg" alt="Placeholder" style="width: auto; height: 120px;">
+        </div>
+
+        <div class="note" style="background-color: #9fe9a6; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <p style="margin-bottom: 10px;">How you cuddle me like a koala</p>
+          <img src="images/koala.jpeg" alt="Placeholder" style="width: auto; height: 120px;">
+        </div>
+        
+        
+
+
+
+        
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/1.jpg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/2.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/3.jpg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/4.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/5.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/6.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/7.jpg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/8.jpg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/9.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/10.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/11.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/12.jpg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/13.jpg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/14.jpg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/15.jpg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/16.jpg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/17.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/18.jpg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/19.jpg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/20.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/21.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/22.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/23.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+
+
+        <div class="Stickers">
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/1.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/2.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/3.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/4.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/5.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/6.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/7.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/8.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/9.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/10.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/12.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/13.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/14.gif" alt="Placeholder">
+            </div>
+            
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/15.gif" alt="Placeholder">
+            </div>
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/16.gif" alt="Placeholder">
+            </div>
+            
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/17.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/18.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/10.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/14.gif" alt="Placeholder">
+            </div>
+            
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/18.gif" alt="Placeholder">
+            </div>
+
+            <div class="sticker-container" style="width: 200px; height: 200px; top: 50px; left: 50px;">
+              <img src="New folder (2)/19.gif" alt="Placeholder">
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script>
+
+
+     function randomizePosition(element, margin = 20) {
+        const container = document.querySelector('.scrollable-content');
+        const containerRect = container.getBoundingClientRect();
+
+        // Get the extended bounds of the scrollable content
+        const containerWidth = containerRect.width;
+        const containerHeight = containerRect.height;
+
+        // Generate random positions within the extended area
+        const left = Math.random() * (containerWidth - element.offsetWidth - margin);
+        const top = Math.random() * (containerHeight - element.offsetHeight - margin);
+
+        element.style.position = 'absolute'; // Ensure the notes are absolutely positioned
+        element.style.left = `${left}px`;
+        element.style.top = `${top}px`;
+    }
+
+    // Disable text selection
+      function disableTextSelection() {
+    document.body.style.userSelect = 'none';
+    document.body.style.pointerEvents = 'none';
+}
+
+    // Re-enable text selection
+      function enableTextSelection() {
+    document.body.style.userSelect = '';
+    document.body.style.pointerEvents = '';
+}
+  
+    // Randomize note positions
+      document.querySelectorAll('.note').forEach(note => {
+    randomizePosition(note);
+
+    note.addEventListener('mousedown', (e) => {
+        disableTextSelection(); // Prevent text selection
+        let shiftX = e.clientX - note.getBoundingClientRect().left;
+        let shiftY = e.clientY - note.getBoundingClientRect().top;
+
+        const moveAt = (pageX, pageY) => {
+            const scrollableArea = document.querySelector('.scrollable-area');
+            const containerRect = scrollableArea.getBoundingClientRect();
+            const scrollTop = scrollableArea.scrollTop;
+
+            const newLeft = pageX - containerRect.left - shiftX;
+            const newTop = pageY - containerRect.top - shiftY + scrollTop;
+
+            note.style.left = `${Math.max(0, Math.min(newLeft, containerRect.width - note.offsetWidth))}px`;
+            note.style.top = `${Math.max(0, Math.min(newTop, scrollableArea.scrollHeight - note.offsetHeight))}px`;
+        };
+
+        const onMouseMove = (e) => moveAt(e.pageX, e.pageY);
+
+        document.addEventListener('mousemove', onMouseMove); // Attach to the document
+
+        const onMouseUp = () => {
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', onMouseUp); // Remove mouseup listener
+            enableTextSelection(); // Re-enable text selection
+        };
+
+        document.addEventListener('mouseup', onMouseUp); // Attach mouseup to the document
+
+        e.preventDefault(); // Prevent default behavior
+    });
+
+    note.addEventListener('dragstart', (e) => e.preventDefault());
+});
+  
+    // Randomize image container positions
+      document.querySelectorAll('.image-container').forEach(container => {
+        randomizePosition(container);
+  
+        // Enable dragging
+        container.addEventListener('mousedown', (e) => {
+          if (e.target.classList.contains('resizer')) return; // Skip dragging if resizing
+          const shiftX = e.clientX - container.getBoundingClientRect().left;
+          const shiftY = e.clientY - container.getBoundingClientRect().top;
+  
+          const moveAt = (pageX, pageY) => {
+            container.style.left = `${pageX - shiftX}px`;
+            container.style.top = `${pageY - shiftY}px`;
+          };
+  
+          const onMouseMove = (e) => moveAt(e.pageX, e.pageY);
+          document.addEventListener('mousemove', onMouseMove);
+  
+          container.addEventListener('mouseup', () => {
+            document.removeEventListener('mousemove', onMouseMove);
+          });
+        });
+  
+
+
+        // Enable resizing
+        container.querySelector('.resizer').addEventListener('mousedown', (e) => {
+          const startX = e.clientX;
+          const startY = e.clientY;
+          const startWidth = parseInt(getComputedStyle(container).width, 10);
+          const startHeight = parseInt(getComputedStyle(container).height, 10);
+  
+          const onMouseMove = (e) => {
+            const newWidth = startWidth + (e.clientX - startX);
+            const newHeight = startHeight + (e.clientY - startY);
+            container.style.width = `${newWidth}px`;
+            container.style.height = `${newHeight}px`;
+          };
+  
+          const stopResize = () => {
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', stopResize);
+          };
+  
+          document.addEventListener('mousemove', onMouseMove);
+          document.addEventListener('mouseup', stopResize);
+  
+          e.preventDefault(); // Prevent text selection during resize
+        });
+      });
+      
+    // Adjust image container to match the image's aspect ratio
+      function adjustImageContainer(container) {
+        const img = container.querySelector('img');
+        const naturalWidth = img.naturalWidth;
+        const naturalHeight = img.naturalHeight;
+        const aspectRatio = naturalWidth / naturalHeight;
+
+        // Set the container size based on the image's aspect ratio
+        const targetHeight = 200; // Initial height (same as notes)
+        const targetWidth = targetHeight * aspectRatio;
+
+        container.style.width = `${targetWidth}px`;
+        container.style.height = `${targetHeight}px`;
+      }
+
+    // Apply to all image containers
+        document.querySelectorAll('.image-container').forEach(container => {
+          const img = container.querySelector('img');
+
+          // Ensure the image is loaded before adjusting
+          if (img.complete) {
+            adjustImageContainer(container);
+          } else {
+            img.onload = () => adjustImageContainer(container);
+          }
+
+          // Enable dragging for the container
+          container.addEventListener('mousedown', (e) => {
+            if (e.target.classList.contains('resizer')) return; // Skip dragging if resizing
+            const shiftX = e.clientX - container.getBoundingClientRect().left;
+            const shiftY = e.clientY - container.getBoundingClientRect().top;
+
+          const moveAt = (pageX, pageY) => {
+              const scrollableArea = document.querySelector('.scrollable-area');
+              const containerRect = scrollableArea.getBoundingClientRect();
+              const scrollTop = scrollableArea.scrollTop; // Account for vertical scroll offset
+
+              const newLeft = pageX - containerRect.left - shiftX;
+              const newTop = pageY - containerRect.top - shiftY + scrollTop;
+
+              // Set the new positions while keeping within the container boundaries
+              container.style.left = `${Math.max(0, Math.min(newLeft, containerRect.width - container.offsetWidth))}px`;
+              container.style.top = `${Math.max(0, Math.min(newTop, scrollableArea.scrollHeight - container.offsetHeight))}px`;
+          };
+
+
+            const onMouseMove = (e) => moveAt(e.pageX, e.pageY);
+            document.addEventListener('mousemove', onMouseMove);
+
+            container.addEventListener('mouseup', () => {
+              document.removeEventListener('mousemove', onMouseMove);
+            });
+          });
+
+          container.addEventListener('dragstart', (e) => e.preventDefault());
+        });
+        
+        
+    // Enable resizing with aspect ratio preservation
+        document.querySelectorAll('.image-container').forEach(container => {
+          const resizer = container.querySelector('.resizer');
+          const img = container.querySelector('img');
+
+          resizer.addEventListener('mousedown', (e) => {
+            const containerRect = container.getBoundingClientRect();
+            const aspectRatio = img.naturalWidth / img.naturalHeight;
+
+            const startX = e.clientX;
+            const startY = e.clientY;
+            const startWidth = containerRect.width;
+            const startHeight = containerRect.height;
+
+            const onMouseMove = (e) => {
+              const deltaX = e.clientX - startX;
+              const deltaWidth = startWidth + deltaX;
+
+        // Calculate height to maintain the aspect ratio
+              const deltaHeight = deltaWidth / aspectRatio;
+
+              container.style.width = `${deltaWidth}px`;
+              container.style.height = `${deltaHeight}px`;
+            };
+
+            const stopResize = () => {
+              document.removeEventListener('mousemove', onMouseMove);
+              document.removeEventListener('mouseup', stopResize);
+            };
+
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', stopResize);
+
+            e.preventDefault(); // Prevent text selection during resizing
+          });
+        });
+
+
+        function randomizePositionInContainer(element, margin = 20) {
+    const container = document.querySelector('.scrollable-content'); // The extended scrollable area
+    const containerRect = container.getBoundingClientRect();
+
+    // Calculate random positions within the scrollable-content bounds
+    const containerWidth = containerRect.width;
+    const containerHeight = containerRect.height;
+
+    const left = Math.random() * (containerWidth - element.offsetWidth - margin);
+    const top = Math.random() * (containerHeight - element.offsetHeight - margin);
+
+    element.style.position = 'absolute';
+    element.style.left = `${left}px`;
+    element.style.top = `${top}px`;
+}
+
+    // Apply random positioning and make sticker-container draggable
+    document.querySelectorAll('.sticker-container').forEach(sticker => {
+          // Randomize position
+          randomizePositionInContainer(sticker);
+
+          // Enable dragging
+          sticker.addEventListener('mousedown', (e) => {
+              e.preventDefault(); // Prevent text selection or drag issues
+
+              const shiftX = e.clientX - sticker.getBoundingClientRect().left;
+              const shiftY = e.clientY - sticker.getBoundingClientRect().top;
+
+              const moveAt = (pageX, pageY) => {
+                  const scrollableArea = document.querySelector('.scrollable-area');
+                  const containerRect = scrollableArea.getBoundingClientRect();
+                  const scrollTop = scrollableArea.scrollTop;
+
+                  const newLeft = pageX - containerRect.left - shiftX;
+                  const newTop = pageY - containerRect.top - shiftY + scrollTop;
+
+                  // Ensure stickers stay within bounds
+                  sticker.style.left = `${Math.max(0, Math.min(newLeft, containerRect.width - sticker.offsetWidth))}px`;
+                  sticker.style.top = `${Math.max(0, Math.min(newTop, scrollableArea.scrollHeight - sticker.offsetHeight))}px`;
+              };
+
+              const onMouseMove = (e) => moveAt(e.pageX, e.pageY);
+
+              // Attach events to the document to handle drag outside the element
+              document.addEventListener('mousemove', onMouseMove);
+
+              document.addEventListener('mouseup', () => {
+                  document.removeEventListener('mousemove', onMouseMove);
+              }, { once: true }); // Ensure mouseup fires only once
+          });
+
+          // Prevent dragging default behavior
+          sticker.addEventListener('dragstart', (e) => e.preventDefault());
+      });
+
+    </script>
+    
+</body>
+</html>

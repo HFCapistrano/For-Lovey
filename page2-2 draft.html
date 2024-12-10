@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="New folder (2)\Firstfear-Whistlepuff-Image-heart.256.ico" type="image/x-icon">
+  <title>The Things I Love About You</title>
+  <link rel="stylesheet" href="styles1.css">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+    header {
+      position: absolute;
+      background-color: #f2bed1aa;
+      font-size: 24px;
+      font-weight: bold;
+      color: #a8404e;
+      padding: 10px 20px;
+      border-radius: 5px;
+      box-shadow: 2px 2px 8px #a8404e;
+    }
+    header:hover{
+        transform: scale(1.1); 
+        background-color: #f196a2; 
+        color: #fff8f9; 
+
+    }
+    .note {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: grab;
+      transform: rotate(calc(var(--tilt, 0deg)));
+      background-color: #fff;
+      overflow: hidden;
+    }
+
+    .note:active {
+      cursor: grabbing;
+    }
+
+    .note:nth-child(odd) {
+      --tilt: -3deg;
+    }
+
+    .note:nth-child(even) {
+      --tilt: 3deg;
+    }
+
+    .note[contenteditable="true"] {
+      border: 2px solid #e0808d;
+      outline: none;
+      color: #333;
+    }
+
+    .note[contenteditable="true"]:empty:before {
+      content: "Click to edit";
+      color: #ccc;
+      font-style: italic;
+    }
+
+  
+  .image-container {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #e8acb4;
+      border-radius: 5px;
+      cursor: grab;
+    }
+
+    .image-container:active {
+      cursor: grabbing;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 5px;
+    }
+
+    .resizer {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #a8404e;
+      border-radius: 50%;
+      cursor: se-resize;
+    }
+
+    .resizer.br { bottom: -5px; right: -5px; }
+
+    /* Scrollable container */
+    .scrollable-area {
+        width: 100%; /* Take up full width */
+        height: 100%; /* Fixed height (adjust as needed) */
+        overflow-y: auto; /* Vertical scrolling enabled */
+        overflow-x: hidden; /* Prevent horizontal scroll */
+        position: relative;
+        border: 2px solid #ffc5d9; /* Optional border for clarity */
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+
+
+
+  </style>
+</head>
+
+
+
+
+<body>
+    <header style="z-index: 888;">
+The Things I love about you
+    </header>
+
+    <a href="page2.html" class="back-button">Back</a>
+    <div class="scrollable-area">
+
+        <div class="note" style="background-color: #FFC1C1;">I love you</div>
+        <div class="note" style="background-color: #E6D4FF;">Hearing your voice</div>
+        <div class="note" style="background-color: #FFFACD;">The random dances that you do when you're excited</div>
+        <div class="note" style="background-color: #DFFFD6;">When you smile</div>
+        <div class="note" style="background-color: #effcb3;">Your pretty brown eyes</div>
+        <div class="note" style="background-color: #dcb9d6;">How excited you get when it comes to food or dogs or kids</div>
+        <div class="note" style="background-color: #ccb3fc;">How cute you are even when you're mad</div>
+        <div class="note" style="background-color: #a9def0;">How kind you are, you don't hesitate to help others</div>
+        <div class="note" style="background-color: #efa6b7;">Your smell</div>
+        <div class="note" style="background-color: #ebc9d1;">Your hugs</div>
+        <div class="note" style="background-color: #dcb9d6;">How cute you look when you sleep</div>
+        <div class="note" style="background-color: #effcb3;">How you're so sweet and considerate always</div>
+        <div class="note" style="background-color: #FFFACD;">When you smile so wide your eyes become small</div>
+        <div class="note" style="background-color: #ccb3fc;">when you hold me</div>
+        <div class="note" style="background-color: #a9def0;">Your cuteness</div>
+        <div class="note" style="background-color: #FFC1C1;">Your pretty face</div>
+        <div class="note" style="background-color: #dcb9d6;">Your head scratches</div>
+        <div class="note" style="background-color: #DFFFD6;">The way you laugh</div>
+        <div class="note" style="background-color: #FFC1C1;">Hearing you sing</div>
+
+
+
+
+
+
+
+
+
+
+        <div class="note" style="background-color: #9fe9a6; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <p style="margin-bottom: 10px;">Your love bites :D</p>
+          <img src="images/bite.jpg" alt="Placeholder" style="width: auto; height: 120px;">
+        </div>
+
+        <div class="note" style="background-color: #9fe9a6; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <p style="margin-bottom: 10px;">How you cuddle me like a koala</p>
+          <img src="images/koala.jpeg" alt="Placeholder" style="width: auto; height: 120px;">
+        </div>
+        
+        
+
+
+
+        
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/1.jpg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/2.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/3.jpg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/4.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/5.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+        <div class="image-container" style="background-color: #a9def0; width: 200px; height: 200px; top: 50px; left: 50px;">
+          <img src="images/6.jpeg" alt="Placeholder">
+          <div class="resizer br"></div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <script>
+      // Function to randomize positions
+      function randomizePosition(element, margin = 30) {
+        const left = Math.random() * (window.innerWidth - element.offsetWidth - margin * 2) + margin;
+        const top = Math.random() * (window.innerHeight - element.offsetHeight - margin * 2) + margin;
+        element.style.left = `${left}px`;
+        element.style.top = `${top}px`;
+      }
+  
+      // Randomize note positions
+      document.querySelectorAll('.note').forEach(note => {
+        randomizePosition(note);
+  
+        // Enable dragging
+        note.addEventListener('mousedown', (e) => {
+          let shiftX = e.clientX - note.getBoundingClientRect().left;
+          let shiftY = e.clientY - note.getBoundingClientRect().top;
+  
+          const moveAt = (pageX, pageY) => {
+            note.style.left = `${pageX - shiftX}px`;
+            note.style.top = `${pageY - shiftY}px`;
+          };
+  
+          const onMouseMove = (e) => moveAt(e.pageX, e.pageY);
+          document.addEventListener('mousemove', onMouseMove);
+  
+          note.addEventListener('mouseup', () => {
+            document.removeEventListener('mousemove', onMouseMove);
+          });
+        });
+  
+        note.addEventListener('dragstart', (e) => e.preventDefault());
+      });
+  
+      // Randomize image container positions
+      document.querySelectorAll('.image-container').forEach(container => {
+        randomizePosition(container);
+  
+        // Enable dragging
+        container.addEventListener('mousedown', (e) => {
+          if (e.target.classList.contains('resizer')) return; // Skip dragging if resizing
+          const shiftX = e.clientX - container.getBoundingClientRect().left;
+          const shiftY = e.clientY - container.getBoundingClientRect().top;
+  
+          const moveAt = (pageX, pageY) => {
+            container.style.left = `${pageX - shiftX}px`;
+            container.style.top = `${pageY - shiftY}px`;
+          };
+  
+          const onMouseMove = (e) => moveAt(e.pageX, e.pageY);
+          document.addEventListener('mousemove', onMouseMove);
+  
+          container.addEventListener('mouseup', () => {
+            document.removeEventListener('mousemove', onMouseMove);
+          });
+        });
+  
+        // Enable resizing
+        container.querySelector('.resizer').addEventListener('mousedown', (e) => {
+          const startX = e.clientX;
+          const startY = e.clientY;
+          const startWidth = parseInt(getComputedStyle(container).width, 10);
+          const startHeight = parseInt(getComputedStyle(container).height, 10);
+  
+          const onMouseMove = (e) => {
+            const newWidth = startWidth + (e.clientX - startX);
+            const newHeight = startHeight + (e.clientY - startY);
+            container.style.width = `${newWidth}px`;
+            container.style.height = `${newHeight}px`;
+          };
+  
+          const stopResize = () => {
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', stopResize);
+          };
+  
+          document.addEventListener('mousemove', onMouseMove);
+          document.addEventListener('mouseup', stopResize);
+  
+          e.preventDefault(); // Prevent text selection during resize
+        });
+      });
+      
+      // Adjust image container to match the image's aspect ratio
+function adjustImageContainer(container) {
+  const img = container.querySelector('img');
+  const naturalWidth = img.naturalWidth;
+  const naturalHeight = img.naturalHeight;
+  const aspectRatio = naturalWidth / naturalHeight;
+
+  // Set the container size based on the image's aspect ratio
+  const targetHeight = 200; // Initial height (same as notes)
+  const targetWidth = targetHeight * aspectRatio;
+
+  container.style.width = `${targetWidth}px`;
+  container.style.height = `${targetHeight}px`;
+}
+
+    // Apply to all image containers
+    document.querySelectorAll('.image-container').forEach(container => {
+      const img = container.querySelector('img');
+
+      // Ensure the image is loaded before adjusting
+      if (img.complete) {
+        adjustImageContainer(container);
+      } else {
+        img.onload = () => adjustImageContainer(container);
+      }
+
+      // Enable dragging for the container
+      container.addEventListener('mousedown', (e) => {
+        if (e.target.classList.contains('resizer')) return; // Skip dragging if resizing
+        const shiftX = e.clientX - container.getBoundingClientRect().left;
+        const shiftY = e.clientY - container.getBoundingClientRect().top;
+
+        const moveAt = (pageX, pageY) => {
+          container.style.left = `${pageX - shiftX}px`;
+          container.style.top = `${pageY - shiftY}px`;
+        };
+
+        const onMouseMove = (e) => moveAt(e.pageX, e.pageY);
+        document.addEventListener('mousemove', onMouseMove);
+
+        container.addEventListener('mouseup', () => {
+          document.removeEventListener('mousemove', onMouseMove);
+        });
+      });
+
+      container.addEventListener('dragstart', (e) => e.preventDefault());
+    });
+    // Enable resizing with aspect ratio preservation
+    document.querySelectorAll('.image-container').forEach(container => {
+      const resizer = container.querySelector('.resizer');
+      const img = container.querySelector('img');
+
+      resizer.addEventListener('mousedown', (e) => {
+        const containerRect = container.getBoundingClientRect();
+        const aspectRatio = img.naturalWidth / img.naturalHeight;
+
+        const startX = e.clientX;
+        const startY = e.clientY;
+        const startWidth = containerRect.width;
+        const startHeight = containerRect.height;
+
+        const onMouseMove = (e) => {
+          const deltaX = e.clientX - startX;
+          const deltaWidth = startWidth + deltaX;
+
+          // Calculate height to maintain the aspect ratio
+          const deltaHeight = deltaWidth / aspectRatio;
+
+          container.style.width = `${deltaWidth}px`;
+          container.style.height = `${deltaHeight}px`;
+        };
+
+        const stopResize = () => {
+          document.removeEventListener('mousemove', onMouseMove);
+          document.removeEventListener('mouseup', stopResize);
+        };
+
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', stopResize);
+
+        e.preventDefault(); // Prevent text selection during resizing
+      });
+    });
+
+    </script>
+    
+</body>
+</html>

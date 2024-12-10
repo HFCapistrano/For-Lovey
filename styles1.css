@@ -1,0 +1,205 @@
+/* Reset styles */
+body {
+    margin: 0;
+    font-family:  'Comic Neue', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('New folder (2)/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color:#C78D8D;
+}
+/* Popup Container */
+.popup {
+    width: 450px; /* 1.5x larger */
+    background: #fffafa;
+    border: 3px solid #ffc5d9;
+    border-radius: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    padding: 15px;
+    max-width: 90%; /* Responsive */
+    box-sizing: border-box;
+}
+.popup-gr{
+    background: linear-gradient(135deg, #fbd3e2, #ffffff);    
+    border: 3px solid #ffc5d9;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Popup Header */
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+
+}
+
+/* Hearts */
+.hearts {
+    display: flex;
+    gap: 8px;
+}
+
+.heart {
+    width: 23px; /* 1.5x larger */
+    height: 23px; /* 1.5x larger */
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+/* Header Icons */
+.popup-actions .icon {
+    width: 25px; /* 1.5x larger */
+    height: 25px; /* 1.5x larger */
+    margin-left: 15px;
+    display: inline-block;
+}
+
+.icon.love {
+    display: inline-block;
+    width: 25px; /* Adjust size */
+    height: 25px; /* Adjust size */
+    background-image: url('New folder (2)/heart-1.svg'); /* Path to your SVG file */
+    background-size: contain; /* Ensures the SVG fits within the element */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center;
+    color: #ff6e7f;
+    transition: color 0.3s ease; 
+}
+
+.icon.love:hover {
+    color: #ff5067;
+}
+
+
+.icon.menu {
+    background: url('New folder (2)/bars-solid.svg') no-repeat center/contain;
+}
+
+.icon.close {
+    background: url('New folder (2)/x-solid.svg') no-repeat center/contain;
+}
+
+/* Popup Body */
+.popup-body h1 {
+    font-size: 30px; /* 1.5x larger */
+    color: #ff6e7f;
+    margin-bottom: 20px;
+}
+
+.flashing-hearts {
+    width: 90px; /* 1.5x larger */
+    height: 90px; /* 1.5x larger */
+}
+
+.bunny-icon {
+    width: 90px; /* 1.5x larger */
+    height: 90px; /* 1.5x larger */
+}
+
+.popup-body p {
+    font-size: 18px; /* 1.5x larger */
+    color: #C78D8D;
+}
+
+/* Popup Footer */
+.popup-footer button {
+    background: #ff6e7f;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px; /* 1.5x larger */
+    color: white;
+    font-size: 18px; /* 1.5x larger */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-footer button:hover {
+    background: #ff5067;
+}
+
+.popup-buttons button {
+    width: 250px;
+    height: 40px;
+    background: #ff6e7f;
+    border: none;
+    border-radius: 25px;
+    padding: 0px 15px; /* 1.5x larger */
+    color: white;
+    font-size: 18px; /* 1.5x larger */
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-buttons button:hover {
+    background: #ff5067;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .popup {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+
+    .popup-body h1 {
+        font-size: 24px;
+    }
+
+    .popup-footer button {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
+.line-separator {
+    width: 100%;
+    height: 2px; /* Thickness of the line */
+    background: #ffc5d9; /* Line color */
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999; /* Ensures it overlaps all elements */
+    background-color: #a8404e;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+    background: #ffe6ef; /* Track color */
+    border-radius: 10px; /* Rounded edges for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffb6c1; /* Thumb color (pink) */
+    border-radius: 10px; /* Rounded scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff8ea4; /* Thumb hover color */
+}
